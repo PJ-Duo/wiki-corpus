@@ -1,5 +1,12 @@
 import sys
 from gensim.corpora import WikiCorpus
+import subprocess
+import importlib.util
+
+if "gensim" in sys.modules:
+    print("=> dep already satisfied. Ignoring pip install.")
+else: 
+    subprocess.check_call([sys.executable, "-m", "pip", "install", "gensim"])
 
 if len(sys.argv) != 2:
     print("Usage: python main.py <dump_file>")
