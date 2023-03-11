@@ -7,8 +7,7 @@ Wiki-Corpus extracts the text content of each wikipedia article and convert it i
 Ensure you have a wiki dump file in `.xml.bz2` format downloaded from [enwiki](https://dumps.wikimedia.org/enwiki/latest/) or [metawiki](https://dumps.wikimedia.org/metawiki/latest/).
 Please be aware a full `enwiki` dump is extremely large in size (+19GB). If you want a smaller in size dump (often for dev or test purposes), you should go for `metawiki`. 
 
-You should have [Python](https://julialang.org/downloads/) installed. <br>
-Install [Gensim](https://github.com/RaRe-Technologies/gensim) using pip (`pip install gensim`)
+You should have [Python](https://julialang.org/downloads/) installed.
 
 ## Usage
 Inside of the cloned repo, pass the url of the xml.bz2 file and initiate the process:
@@ -22,5 +21,5 @@ Have a look at your text corpus, named `corpus.txt` inside of the `out` folder.
 <details>
 <summary>Nothing happens after I run the file with the passed argument</summary>
 <br>
-Try `CTRL + C` after you ran the command. Only do it once, because doing it twice kills the process.
+Try `CTRL + C` after you run the command. Only do it once, because doing it twice kills the process.
 </details>
