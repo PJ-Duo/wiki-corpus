@@ -4,19 +4,23 @@ Having a large and diverse corpus like Wikipedia is invaluable for developing an
 Wiki-Corpus extracts the text content of each wikipedia article and convert it into a format that can be used for natural language processing tasks, such as tokenization, part-of-speech tagging and etc. 
 
 ## Prerequisites 
-Ensure you have a wiki xml dump file downloaded from [dumps.wikimedia.org](https://dumps.wikimedia.org/enwiki/latest/).
-Please be aware they're usually extremely large in size (+19GB) and for most use cases, `enwiki-latest-pages-articles.xml.bz2` should be downloaded. 
+Ensure you have a wiki dump file in `.xml.bz2` format downloaded from [enwiki](https://dumps.wikimedia.org/enwiki/latest/) or [metawiki](https://dumps.wikimedia.org/metawiki/latest/).
+Please be aware a full `enwiki` dump is extremely large in size (+19GB). If you want a smaller in size dump (often for dev or test purposes), you should go for `metawiki`. 
 
-Lastly, ensure you have [node.js](https://nodejs.org/en/) installed.
+Have [Python](https://julialang.org/downloads/) installed.
+Install [Gensim](https://github.com/RaRe-Technologies/gensim) (`pip install gensim`)
 
 ## Usage
-Inside of the cloned repo, install the dependency required by wiki-corpus:
+Inside of the cloned repo, pass the url of the xml.bz2 file and initiate the process:
 ```shell
-> npm install
+> python main.py metawiki-latest-pages-articles.xml
 ```
-Pass the url of the extracted xml file and initiate the process:
-```shell
-> node index.js dump.xml
-```
+You can exit the process at anytime you feel enough text corpus is made, or wait until everything is processed.
+Have a look at your text corpus, named `corpus.txt` inside of the `out` folder.
 
-Once the process is over, have a look at the complete text corpus, named `output.txt` inside of the `out` folder.
+## FAQ
+<details>
+<summary>Nothing happens after I run the file with the passed argument</summary>
+<br>
+Try `CTRL + C` after you ran the command. Only do it once, because doing it twice kills the process.
+</details>
