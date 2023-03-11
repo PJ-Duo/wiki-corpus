@@ -8,7 +8,7 @@ Ensure you have a wiki dump file in `.xml.bz2` format downloaded from [enwiki](h
 Please be aware a full `enwiki` dump is extremely large in size (+19GB). If you want a smaller in size dump (often for dev or test purposes), you should go for `metawiki`. 
 
 You should have [Python](https://julialang.org/downloads/) installed. <br>
-Install [Gensim](https://github.com/RaRe-Technologies/gensim) using pip (`pip install gensim`)
+Install [Gensim](https://github.com/RaRe-Technologies/gensim) using pip (`pip install gensim`).
 
 ## Usage
 Inside of the cloned repo, pass the url of the xml.bz2 file and initiate the process:
